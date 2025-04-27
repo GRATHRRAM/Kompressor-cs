@@ -1,14 +1,51 @@
-﻿namespace KPC
+﻿using KP;
+
+namespace KPC
 {
-    public class Position
+    public class Component { }
+
+    public class Position : Component
     {
-        public float x { get; set; }
-        public float y { get; set; }
+        Vector2 Value = new Vector2();
+
+        public Position()
+        {
+            Value = Vector2.Zero;
+        }
+
+        public Position(Vector2 value)
+        {
+            Value = value;
+        }
     }
 
-    public class Size
+    public class Size : Component
     {
-        public float w { get; set; }
-        public float h { get; set; }
+        Vector2 Value = new Vector2();
+
+        public Size()
+        {
+            Value = Vector2.Zero;
+        }
+
+        public Size(Vector2 value)
+        {
+            Value = value;
+        }
+    }
+
+    public class Color : Component
+    {
+        KP.Color Value = new KP.Color();
+
+        public Color()
+        {
+            Value = KP.Color.White;
+        }
+
+        public Color(KP.Color Color)
+        {
+            Value = Color;
+        }
     }
 }
