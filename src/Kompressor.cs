@@ -1,10 +1,11 @@
 using System;
 using SDL;
+using KP;
 
 namespace KP {
     class Engine
     {
-        unsafe SDL_Window *CurrentWindow = null;
+        private Window CurrentWindow;
 
         unsafe public Engine(string Title, int Width, int Height, SDL_WindowFlags Flags)
         {
@@ -15,7 +16,12 @@ namespace KP {
                 return;
             }
 
-            CurrentWindow = SDL3.SDL_CreateWindow(Title, Width, Height, Flags);
+            CurrentWindow = new Window(Title, Width, Height, Flags);
+        }
+
+        public Window GetWindow()
+        {
+            return CurrentWindow;
         }
     }
 }

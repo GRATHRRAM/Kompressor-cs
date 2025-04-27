@@ -12,8 +12,4 @@
     <PackageReference Include="ppy.SDL3-CS" Version="2025.220.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="src\Renderer\" />
-  </ItemGroup>
-
 </Project>
